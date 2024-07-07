@@ -1,5 +1,12 @@
+from datetime import date
 from datetime import datetime
 
-def today(opcao = "sem hora"):
-    return   datetime.today().strftime('%d - %m - %y %H:%M:%S') if opcao == "hora" else datetime.today().strftime('%d - %m - %y')
 
+data_atual = date.today()
+    #print(data_atual.year)
+
+data_inserida = input("Digite a data que deseja no formato (ano / mẽs / dia): ")
+data = datetime.strptime(data_inserida, "%Y/%m/%d")
+
+
+print(data)
